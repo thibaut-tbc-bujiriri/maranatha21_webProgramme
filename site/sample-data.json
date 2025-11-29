@@ -1,0 +1,60 @@
+{
+  "speakers": [
+    {
+      "id": 1,
+      "name": "Pasteur Joel Bagalwa",
+      "title": "Pasteur - Goma",
+      "image": "assets/images/speaker1-placeholder.jpg",
+      "bio": "Pasteur Joel Bagalwa est un serviteur de Dieu dévoué originaire de Goma. Avec un cœur passionné pour l'enseignement de la Parole de Dieu, il apporte une profondeur biblique et une onction spirituelle à ses ministères. Son engagement dans la formation des disciples et le réveil spirituel fait de lui un instrument précieux pour l'édification de l'Église.",
+      "topic": "Enseignements transformateurs pour l'édification de l'Église"
+    },
+    {
+      "id": 2,
+      "name": "Pasteur Emmanuel Kwibuka",
+      "title": "Hôte - Pasteur - Goma",
+      "image": "assets/images/speaker2-placeholder.jpg",
+      "bio": "Pasteur Emmanuel Kwibuka, hôte de cette édition de Maranatha 21, est un leader spirituel reconnu à Goma. Son ministère se caractérise par un engagement profond pour le réveil et la restauration spirituelle. En tant qu'hôte de cet événement, il apporte non seulement son expertise dans l'organisation, mais aussi sa passion pour voir les vies transformées par la puissance de la Parole de Dieu.",
+      "topic": "Réveil et restauration spirituelle"
+    },
+    {
+      "id": 3,
+      "name": "Pasteur Bienvenu Karakubwa",
+      "title": "Pasteur - Bukavu",
+      "image": "assets/images/speaker3-placeholder.jpg",
+      "bio": "Pasteur Bienvenu Karakubwa vient de Bukavu pour apporter sa contribution à Maranatha 21. Son ministère transfrontalier témoigne de son engagement pour l'unité du Corps de Christ et le réveil dans toute la région. Avec une riche expérience dans l'enseignement biblique et le leadership pastoral, il apporte une perspective unique et enrichissante.",
+      "topic": "Destinée, restauration et accomplissement de l'appel de Dieu"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "text": "Maranatha 21 a été une expérience transformatrice pour ma vie spirituelle. Les enseignements reçus m'ont aidé à renforcer ma foi et à trouver une nouvelle direction dans ma marche avec Dieu.",
+      "author": "Marie K.",
+      "date": "2024-03-15"
+    },
+    {
+      "id": 2,
+      "text": "Je suis reconnaissant pour cette opportunité de grandir dans la connaissance de la Parole. L'atmosphère était remplie de la présence de Dieu, et j'ai été béni au-delà de mes attentes.",
+      "author": "Jean-Pierre M.",
+      "date": "2024-03-20"
+    },
+    {
+      "id": 3,
+      "text": "Un programme bien organisé avec des intervenants de qualité. J'ai été particulièrement touché par les moments de prière et de louange. Merci à toute l'équipe pour ce travail remarquable.",
+      "author": "Sophie T.",
+      "date": "2024-03-25"
+    }
+  ],
+  "program": {
+    "name": "Maranatha 21",
+    "edition": "2ème Édition",
+    "location": {
+      "city": "Goma",
+      "area": "Katoyi",
+      "address": "En face de l'église Sebeka Osokato",
+      "country": "République Démocratique du Congo"
+    },
+    "organization": "Communauté des églises chrétiennes pour le Nouveau Départ (CECND)"
+  }
+}
+

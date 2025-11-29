@@ -1,0 +1,21 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Note: Les images placeholder doivent être remplacées par de vraies images avant le déploiement
+
