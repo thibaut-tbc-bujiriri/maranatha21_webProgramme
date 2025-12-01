@@ -59,12 +59,38 @@ function initNavigation() {
             nav.classList.toggle('active');
         });
 
-        // Fermer le menu quand on clique sur un lien
+        // Gestion des dropdowns
+        const dropdownItems = document.querySelectorAll('nav ul li.has-dropdown');
+        dropdownItems.forEach(item => {
+            const dropdownLink = item.querySelector('> a');
+            if (dropdownLink) {
+                dropdownLink.addEventListener('click', function(e) {
+                    // Sur mobile, toggle le dropdown
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            }
+        });
+
+        // Fermer le menu quand on clique sur un lien (sauf dropdown parent)
         const navLinks = document.querySelectorAll('nav ul li a');
         navLinks.forEach(link => {
-            link.addEventListener('click', function() {
+            link.addEventListener('click', function(e) {
+                // Ne pas fermer si c'est un lien dropdown parent sur mobile
+                const parent = link.closest('li.has-dropdown');
+                if (parent && window.innerWidth <= 768 && link === parent.querySelector('> a')) {
+                    return;
+                }
+                
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
+                
+                // Fermer tous les dropdowns
+                dropdownItems.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
             });
         });
 
@@ -73,6 +99,9 @@ function initNavigation() {
             if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
+                dropdownItems.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
             }
         });
     }
@@ -87,6 +116,14 @@ function highlightActiveNav() {
         const linkHref = link.getAttribute('href');
         if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
             link.classList.add('active');
+            // Si c'est un élément du dropdown, marquer aussi le parent
+            const dropdownItem = link.closest('.dropdown-menu');
+            if (dropdownItem) {
+                const parentLink = dropdownItem.previousElementSibling;
+                if (parentLink) {
+                    parentLink.classList.add('active');
+                }
+            }
         }
     });
 }
