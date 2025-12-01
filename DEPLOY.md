@@ -29,3 +29,4 @@ Si vous obtenez toujours une erreur 404 :
 2. Vérifiez que `index.html` existe dans `site/index.html`
 3. Vérifiez les logs de déploiement dans Vercel pour voir les erreurs
 
+
