@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maranatha 21 - Programme annuel de la Communauté des églises chrétiennes pour le Nouveau Départ (CECND). 2ème édition à Goma, RDC.">
+    <meta name="keywords" content="Maranatha 21, CECND, Église, Goma, RDC, Programme spirituel">
+    <meta property="og:title" content="Maranatha 21 - CECND">
+    <meta property="og:description" content="Rejoignez-nous pour la 2ème édition de Maranatha 21 à Goma, RDC">
+    <meta property="og:type" content="website">
+    <title>Maranatha 21 - Communauté des églises chrétiennes pour le Nouveau Départ</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo_ecnd.jpg">
+    <link rel="preload" as="image" href="assets/images/affiche_event.jpg">
+    <link rel="stylesheet" href="css/styles.css?v=1">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; margin-right: 2.5rem;">
+                    <img src="assets/images/logo_ecnd.jpg" alt="Logo CECND" style="height: 50px; width: auto;" loading="lazy">
+                    <div>
+                        <div style="display: flex; align-items: baseline; gap: 0.3rem;">
+                            <span style="font-size: 1.5rem; font-weight: bold; color: var(--color-secondary);">MARANATHA</span>
+                            <span style="font-size: 1.5rem; font-weight: bold; color: white;">21</span>
+                        </div>
+                        <div style="font-size: 0.6rem; font-style: italic; margin-top: 0.2rem; opacity: 0.9; color: white;">1 Corinthiens 16:22</div>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li class="has-dropdown">
+                        <a href="program.html">Programme</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="resume-journalier.html">Résumé journalier</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="speakers.html">Intervenants</a></li>
+                    <li><a href="testimonials.html">Témoignages</a></li>
+                    <li><a href="album.html">Album</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Changer le thème" title="Changer le thème">
+                    <i class="bx bx-sun icon-sun" aria-hidden="true"></i>
+                    <i class="bx bx-moon icon-moon" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div class="hero-image" style="text-align: center;">
+                    <img src="assets/images/affiche_event.jpg" alt="Affiche Maranatha 21" style="max-width: 70%; height: auto; border-radius: 10px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);" loading="lazy">
+                </div>
+                <div class="hero-content">
+                    <h1>Maranatha 21</h1>
+                    <p style="font-size: 1.2rem; font-style: italic; margin: 1rem 0;">"Maranatha ! Que le Seigneur vienne !"</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">1 Corinthiens 16:22</p>
+                    <p>2ème Édition - Programme Annuel</p>
+                    <p style="font-size: 1.1rem; margin-top: 1rem;">Communauté des églises chrétiennes pour le Nouveau Départ (CECND)</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: nowrap; margin-top: 1.5rem; align-items: center;">
+                        <a href="contact.html" class="btn btn-large">S'inscrire maintenant</a>
+                        <button id="video-invitation-btn" class="btn btn-secondary btn-large" style="display: flex; align-items: center; gap: 0.5rem; white-space: nowrap;">
+                            <i class="bx bx-play" aria-hidden="true"></i> Message d'invitation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section container">
+            <h2 class="section-title">Bienvenue à Maranatha 21</h2>
+            <p class="section-subtitle">Un temps de réveil, de restauration et de renouvellement spirituel</p>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    Nous sommes ravis de vous accueillir pour la deuxième édition de <strong>Maranatha 21</strong>, 
+                    un programme annuel conçu pour approfondir votre relation avec Dieu, renforcer votre foi et 
+                    vous équiper pour votre marche chrétienne. Rejoignez-nous pour des moments de louange, 
+                    d'enseignement biblique et de communion fraternelle.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Info Cards -->
+        <section class="section container">
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3 class="card-title"><i class="bx bx-calendar" aria-hidden="true"></i> Date</h3>
+                        <p class="card-text">À venir - Restez connectés pour les dates exactes</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="bx bx-map" aria-hidden="true"></i> Lieu</h3>
+                        <p class="card-text">République Démocratique du Congo<br>Goma, Katoyi<br>En face de l'église Sebeka Osokato</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title"><i class="bx bx-target-lock" aria-hidden="true"></i> Objectif</h3>
+                        <p class="card-text">Révéler, restaurer et renouveler votre vie spirituelle à travers la Parole de Dieu</p>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="section container" style="text-align: center; background: var(--color-bg-light); padding: 3rem; border-radius: 10px;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">Prêt à vous joindre à nous ?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--color-text-light);">
+                Inscrivez-vous dès maintenant ou contactez-nous pour plus d'informations
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-large">S'inscrire</a>
+                <a href="program.html" class="btn btn-secondary btn-large">Voir le programme</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Maranatha 21</h3>
+                <p>Communauté des églises chrétiennes pour le Nouveau Départ (CECND)</p>
+                <p>2ème Édition</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="bx bx-map" aria-hidden="true"></i> Goma, Katoyi<br>En face de l'église Sebeka Osokato<br>République Démocratique du Congo</p>
+                <p><i class="bx bx-envelope" aria-hidden="true"></i> cefnouveaudepart@gmail.com</p>
+                <p><i class="bx bx-phone" aria-hidden="true"></i> +243 992177110</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <a href="about.html">À propos</a>
+                <a href="program.html">Programme</a>
+                <a href="speakers.html">Intervenants</a>
+                <a href="testimonials.html">Témoignages</a>
+                <a href="album.html">Album</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61560980277927" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <i class="bx bxl-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cefnouveaudepart/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <i class="bx bxl-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/search?q=cef%20nouveau%20depart&t=1764431112552" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <i class="bx bxl-tiktok" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/243992177110" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                        <i class="bx bxl-whatsapp" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CECND - Maranatha 21. Tous droits réservés.</p>
+            <p>Développé par <a href="https://devportfolio-tbc.web.app/" target="_blank" rel="noopener noreferrer" style="color: var(--color-secondary); text-decoration: none; font-weight: 600;">Tbc_Groupe</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal pour la vidéo d'invitation -->
+    <div id="video-modal" class="video-modal" style="display: none;">
+        <div class="video-modal-overlay"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" aria-label="Fermer la vidéo">&times;</button>
+            <div class="video-container">
+                <video id="invitation-video" controls preload="metadata" poster="assets/images/affiche_event.jpg">
+                    <source src="assets/images/videos/invitation.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js?v=1" defer></script>
+</body>
+</html>
+
