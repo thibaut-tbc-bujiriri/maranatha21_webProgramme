@@ -5,9 +5,10 @@
 
 /* === Variables CSS === */
 :root {
-    --color-primary: #0B3D91; /* Bleu navy */
-    --color-secondary: #E6F0FF; /* Bleu très clair */
-    --color-accent: #1955D1;   /* Bleu moyen */
+    --color-primary: #0D2C7C; /* Navy du logo ECND */
+    --color-secondary: #13BFD8; /* Cyan/teal du logo (dove/stars) */
+    --color-accent: #13BFD8;   /* Utilisé pour les dégradés et hover */
+    --color-highlight: #FF6B00; /* Orange du livre (séparateurs et accents) */
     --color-text: #2d3748;
     --color-text-light: #718096;
     --color-bg: #ffffff;
@@ -21,9 +22,10 @@
 
 /* === Thème Sombre === */
 [data-theme="dark"] {
-    --color-primary: #0A2E73; /* Bleu navy plus foncé */
-    --color-secondary: #CFE0FF; /* Bleu clair assombri */
-    --color-accent: #1648B3;
+    --color-primary: #0A2768; /* Navy foncé */
+    --color-secondary: #11AFC7; /* Cyan assombri */
+    --color-accent: #11AFC7;
+    --color-highlight: #E66000;
     --color-text: #e2e8f0;
     --color-text-light: #a0aec0;
     --color-bg: #0f172a; /* Fond très sombre */
@@ -335,7 +337,7 @@ main {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: var(--color-secondary);
+    background-color: var(--color-highlight);
     border-radius: 2px;
 }
 
@@ -372,7 +374,7 @@ main {
 }
 
 [data-theme="dark"] .hero {
-    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
 }
 
 .hero::before {
@@ -853,6 +855,14 @@ footer {
     opacity: 0.9;
 }
 
+.mobile-only{display:none}
+@media (max-width: 768px){
+  .mobile-only{display:block}
+  nav ul li.has-dropdown .dropdown-menu .resume-subitem{display:none}
+  nav ul li.has-dropdown .dropdown-menu a[href$="resume-journalier.html"]{display:none!important}
+  nav ul li.has-dropdown .dropdown-menu{display:none!important}
+  nav ul li.has-dropdown > a::after{content:none}
+}
 /* === Animations === */
 @keyframes fadeInUp {
     from {
