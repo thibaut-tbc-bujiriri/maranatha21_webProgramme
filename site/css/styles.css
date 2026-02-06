@@ -5,9 +5,9 @@
 
 /* === Variables CSS === */
 :root {
-    --color-primary: #1a365d; /* Bleu marine */
-    --color-secondary: #d4af37; /* Or */
-    --color-accent: #2c5282;
+    --color-primary: #0B3D91; /* Bleu navy */
+    --color-secondary: #E6F0FF; /* Bleu très clair */
+    --color-accent: #1955D1;   /* Bleu moyen */
     --color-text: #2d3748;
     --color-text-light: #718096;
     --color-bg: #ffffff;
@@ -21,9 +21,9 @@
 
 /* === Thème Sombre === */
 [data-theme="dark"] {
-    --color-primary: #2d4a7c; /* Bleu marine plus foncé */
-    --color-secondary: #d4af37; /* Or conservé */
-    --color-accent: #3a5f8f;
+    --color-primary: #0A2E73; /* Bleu navy plus foncé */
+    --color-secondary: #CFE0FF; /* Bleu clair assombri */
+    --color-accent: #1648B3;
     --color-text: #e2e8f0;
     --color-text-light: #a0aec0;
     --color-bg: #0f172a; /* Fond très sombre */
@@ -158,7 +158,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.12);
     color: var(--color-secondary);
 }
 
@@ -416,13 +416,15 @@ main {
 
 /* === Buttons === */
 .btn {
-    display: inline-block;
-    padding: 0.875rem 2rem;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid transparent;
     cursor: pointer;
     transition: var(--transition);
     font-size: 1rem;
@@ -430,15 +432,15 @@ main {
 }
 
 .btn:hover {
-    background-color: #b8941f;
-    transform: translateY(-2px);
+    background-color: var(--color-accent);
+    transform: translateY(-1px);
     box-shadow: var(--shadow-hover);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--color-secondary);
-    color: var(--color-secondary);
+    background-color: #ffffff;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
 }
 
 .btn-secondary:hover {
@@ -447,7 +449,7 @@ main {
 }
 
 .btn-large {
-    padding: 1.2rem 2.5rem;
+    padding: 1rem 1.75rem;
     font-size: 1.1rem;
 }
 
@@ -599,8 +601,8 @@ main {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(25, 85, 209, 0.15);
 }
 
 .form-group textarea {
@@ -801,7 +803,7 @@ footer {
 .social-links a {
     width: 40px;
     height: 40px;
-    background-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -817,9 +819,9 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.25);
+    color: var(--color-secondary);
+    transform: translateY(-2px);
 }
 
 .social-links a:hover svg {
