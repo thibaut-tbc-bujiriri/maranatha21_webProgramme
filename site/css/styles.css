@@ -942,8 +942,7 @@ footer {
 
     /* Dropdown Menu Mobile */
     nav ul li.has-dropdown > a::after {
-        content: ' ▶';
-        float: right;
+        content: none;
     }
 
     nav ul li .dropdown-menu {
