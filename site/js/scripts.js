@@ -62,11 +62,14 @@ function initNavigation() {
         // Gestion des dropdowns
         const dropdownItems = document.querySelectorAll('nav ul li.has-dropdown');
         dropdownItems.forEach(item => {
-            const dropdownLink = item.querySelector('> a');
+            const dropdownLink = item.querySelector(':scope > a');
             if (dropdownLink) {
                 dropdownLink.addEventListener('click', function(e) {
-                    // Sur mobile, toggle le dropdown
                     if (window.innerWidth <= 768) {
+                        const menu = item.querySelector('.dropdown-menu');
+                        if (!menu || getComputedStyle(menu).display === 'none') {
+                            return;
+                        }
                         e.preventDefault();
                         item.classList.toggle('active');
                     }
@@ -80,7 +83,7 @@ function initNavigation() {
             link.addEventListener('click', function(e) {
                 // Ne pas fermer si c'est un lien dropdown parent sur mobile
                 const parent = link.closest('li.has-dropdown');
-                if (parent && window.innerWidth <= 768 && link === parent.querySelector('> a')) {
+                if (parent && window.innerWidth <= 768 && link === parent.querySelector(':scope > a')) {
                     return;
                 }
                 
@@ -126,6 +129,24 @@ function highlightActiveNav() {
             }
         }
     });
+}
+
+// Déplacer \"Résumé journalier\" entre le sous-menu et le menu principal selon la largeur
+function handleMenuMove(){
+    const mainMenu = document.querySelector('nav ul.main-menu');
+    const programmeItem = mainMenu ? mainMenu.querySelector('li.has-dropdown') : null;
+    const programmeSubmenu = programmeItem ? programmeItem.querySelector(':scope > ul.programme-submenu') : null;
+    const resumeItem = document.querySelector('li.resume-item');
+    if (!mainMenu || !programmeItem || !programmeSubmenu || !resumeItem) return;
+    if (window.innerWidth <= 768) {
+        if (!mainMenu.contains(resumeItem) || resumeItem.parentElement !== mainMenu) {
+            mainMenu.insertBefore(resumeItem, programmeItem.nextSibling);
+        }
+    } else {
+        if (!programmeSubmenu.contains(resumeItem)) {
+            programmeSubmenu.appendChild(resumeItem);
+        }
+    }
 }
 
 // ============================================
@@ -464,6 +485,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll('.card, .speaker-card, .testimonial-card');
     animatedElements.forEach(el => observer.observe(el));
     initVideoModal();
+    handleMenuMove();
+    window.addEventListener('resize', handleMenuMove);
 });
 
 // ============================================

@@ -31,11 +31,16 @@
                     <span></span>
                     <span></span>
                 </button>
-                <ul>
+                <ul class="main-menu">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="about.html">À propos</a></li>
-                    <li><a href="program.html">Programme</a></li>
-                    <li class="mobile-only"><a href="resume-journalier.html">Résumé journalier</a></li>
+                    <li class="has-dropdown">
+                        <a href="program.html">Programme</a>
+                        <ul class="dropdown-menu programme-submenu">
+                            <li class="resume-item"><a href="resume-journalier.html">Résumé journalier</a></li>
+                        </ul>
+                    </li>
+                    
                     <li><a href="speakers.html">Intervenants</a></li>
                     <li><a href="testimonials.html" class="active">Témoignages</a></li>
                     <li><a href="album.html">Album</a></li>
@@ -146,7 +151,7 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js?v=1" defer></script>
+    <script src="js/scripts.js?v=2" defer></script>
 </body>
 </html>
 
